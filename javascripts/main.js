@@ -56,25 +56,9 @@ $(document).on("click", ".addtowatchlist", (e) => {
     }
 });
 
-//Delete movie card and from firebase *
-// $(document).on("click", "#deleteMovie",(e) => {
-//     if (Firebase.currentUsers()!== null) {
-//         let myMovie = $(e.currentTarget).attr("movieid");
-
-//         Firebase.deleteMovie(myMovie);//.then((res)=>{
-//         //     debugger;
-//             // let mymovieobj = item;
-//             // mymovieobj.uid = Firebase.currentUsers();
-//             // mymovieobj.name = Firebase.userDetails()[0];
-//             // mymovieobj.email = Firebase.userDetails()[1];
-//             // console.log("deletemovieRes", res);
-//             // Firebase.deleteMovie(mymovieobj);
-
-//         // });
-//     }
-// });
 
 $(document).on("click", ".deleteMovie", function(event) {
+
 
     let disableMovie = document.getElementById("disableMovie");
 
@@ -89,6 +73,16 @@ $(document).on("click", ".deleteMovie", function(event) {
         window.alert('Please log in to delete');
     }
 });
+
+// Remove song then reload the DOM w/out new song
+// $(document).on("click", ".delete-btn", function () {
+//   console.log("clicked delete song", $(this).data("delete-id"));
+//   let songID = $(this).data("delete-id");
+//   db.deleteSong(songID)
+//   .then(() => {
+//      loadSongsToDOM();
+//   });
+// });
 
 
 // $(document).on("click", ".delete-btn", function () {
@@ -130,7 +124,7 @@ $(document).on("click",".stars",(e)=>{
         });
     } else {
         $("#id").hide();
-        // disableStars.disabled = true;
+        disableStars.disabled = true;
         window.alert('Please log in to rate');
     }
 });
@@ -167,9 +161,6 @@ $(document).on("click", "#unwatched", (event) => {
     // console.log ("userID", userID);
 
 });
-
-
-
 
 
 $(document).on("click", "#untracked", () => {

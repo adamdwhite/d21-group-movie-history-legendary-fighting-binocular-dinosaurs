@@ -9,7 +9,7 @@
                     <h5 class="movie-date">Release Date: {{release_date}}</h5>
                     <button type="button" class="addtowatchlist btn btn-success" id="watched--{{id}}" movieid="{{id}}"><a href="#">Add To WatchList</a></button>
                     <button type="button" class="deleteMovie btn btn-success" id="disableMovie" data-delete-id="{{fireBaseid}}"><a href="#">Delete Movie</a></button>
-                        <div class="stars" id="rateYo{{id}}" movieid="{{id}}" data-stars-id="{{fireBaseid}}"></div>
+                    <div class="stars" id="rateYo{{id}}" movieid="{{id}}" data-stars-id="{{fireBaseid}}"></div>
 
 
         </div>
@@ -41,7 +41,7 @@ $(function () {
 
   $("#rateYo{{id}}").rateYo({
     numStars: 10,
-    rating:0,
+    rating: 0,
     spacing: "5px",
     fullStar: true
   });
